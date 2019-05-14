@@ -1,26 +1,28 @@
 # Site settings
-name: Brittany Chiang
-title: Brittany Chiang | Front End Software Engineer
-description: Design-minded front-end software engineer focused on building beautiful interfaces and experiences
-url: https://brittanychiang.com/
+name: Rishabh Saxena
+title: Rishabh Saxena | Backend Software Engineer
+description: Backend Software Engineer focused on building scalable and secure architectures
+url: https://srishabh.com/
 baseurl: ""
-email: brittany.chiang@gmail.com
-cover: https://brittanychiang.com/img/og.png
-logo: https://brittanychiang.com/img/emojis/technologist.png
-resume: https://brittanychiang.com/resume.pdf
+email: contact@srishabh.com
+cover: https://srishabh.com/img/og.png
+logo: https://srishabh.com/img/emojis/technologist.png
+resume: https://srishabh.com/resume.pdf
 social:
   - title: email
-    url: mailto:brittany.chiang@gmail.com
+    url: mailto:contact@srishabh.com
   - title: twitter
-    url: https://twitter.com/bchiang7
+    url: https://twitter.com/equate_rs
+  - title: facebook
+    url: https://facebook.com/rishabhstr
   - title: instagram
-    url: https://instagram.com/bchiang7
-  - title: codepen
-    url: http://codepen.io/bchiang7
+    url: https://instagram.com/rishabhstr
+  - title: medium
+    url: https://medium.com/rishabhstr
   - title: github
-    url: https://github.com/bchiang7
+    url: https://github.com/rishabhs95
   - title: linkedin
-    url: https://www.linkedin.com/in/bchiang7
+    url: https://www.linkedin.com/in/saxenarishabh
 
 # Build settings
 markdown: kramdown

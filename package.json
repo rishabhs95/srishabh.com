@@ -1,14 +1,14 @@
 {
-  "name": "brittanychiang.com",
+  "name": "srishabh.com",
   "version": "0.0.0",
-  "description": "Design-minded front-end software engineer focused on building beautiful interfaces and experiences",
+  "description": "Backend Software Engineer focused on building scalable and secure architectures",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp serve",
     "build": "gulp build"
   },
-  "author": "Brittany Chiang",
-  "license": "ISC",
+  "author": "Rishabh Saxena",
+  "license": "MIT",
   "devDependencies": {
     "@nuscout/eslint-config": "^0.2.1",
     "browser-sync": "^2.24.7",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bchiang7/bchiang7.github.io"
+    "url": "https://github.com/rishabhs95/srishabh.com"
   },
-  "homepage": "https://github.com/bchiang7/bchiang7.github.io"
+  "homepage": "https://github.com/rishabhs95/srishabh.com"
 }
