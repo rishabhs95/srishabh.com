@@ -1,44 +1,41 @@
-- company: Upstatement
-  url: https://www.upstatement.com/
-  time: May 2018 - Present
-  position: Engineer
+- company: Yelp, Inc.
+  url: https://www.yelp.com/
+  time: Jun 2019 - Present
+  position: Software Engineer, Backend
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/2560px-Yelp_Logo.svg.png
 
-- company: Scout
-  url: https://web.northeastern.edu/scout/
-  time: Jan - June 2018
-  position: Studio Developer
+- company: BrowserStack
+  url: https://www.browserstack.com/
+  time: Jun 2018 - May 2019
+  position: Software Engineer & DevOps, Backend
+  image: https://i1.wp.com/www.diogonunes.com/blog/wp-content/uploads/2016/07/browserstack-logo.png?resize=840%2C276
 
-- company: Apple Music
-  url: https://www.apple.com/music/
-  time: July - Dec 2017
-  position: UI Engineer Co-op
+- company: Intel Corporation
+  url: https://www.intel.com/
+  time: Jan 2018 - Jun 2018
+  position: Software Engineering Intern
+  image: https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg
 
-- company: Scout
-  url: https://web.northeastern.edu/scout/
-  time: Jan - June 2017
-  position: Studio Developer
+- company: Crowdfire
+  url: https://www.crowdfireapp.com/
+  time: May 2017 - Jun 2017
+  position: Software Engineering Intern
+  image: https://i.pinimg.com/originals/71/fa/a6/71faa63d97732a1627081c01d002892a.png
 
-- company: Starry
-  url: https://starry.com/
-  time: July - Dec 2016
-  position: Software Engineer Co-op
+- company: Mozilla
+  url: https://mozilla.org
+  time: Oct 2016 - Apr 2017
+  position: Software Engineer - Winter of Security
+  image: https://www-archive.mozilla.org/foundation/identity-guidelines/mozilla-foundation-bw.png
 
-- company: Northeastern University
-  url: http://www.ccis.northeastern.edu/
-  time: Jan - May 2016
-  position: HCI Teaching Assistant
+- company: Google
+  url: https://summerofcode.withgoogle.com
+  time: Apr 2016 - Aug 2016
+  position: Software Engineer - Summer of Code
+  image: http://pngimg.com/uploads/google/google_PNG19644.png
 
-- company: NU Women in Tech
-  url: http://nuwit.ccs.neu.edu/
-  time: Jan 2016 - May 2017
-  position: President & Web Chair
-
-- company: MullenLowe U.S.
-  url: https://us.mullenlowe.com/
-  time: July - Dec 2015
-  position: Creative Technologist Co-op
-
-- company: Northeastern University
-  url: http://www.ccis.northeastern.edu/
-  time: Mar - May 2015
-  position: HCI Research Assistant
+- company: Noted
+  url: https://play.google.com/store/apps/details?id=study.noted.app&hl=en
+  time: Dec 2015 - Jan 2016
+  position: Software Engineer - Freelancer
+  image: https://lh3.googleusercontent.com/ijp0yU5ecGiLHqlwrrlhvdk2R4Ga2ZvzCQQ0Me3Ty5S_gEU21r3sjUqGKahELmUVBTA=s180
