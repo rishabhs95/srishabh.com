@@ -2,40 +2,40 @@
   url: https://www.yelp.com/
   time: Jun 2019 - Present
   position: Software Engineer, Backend
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/2560px-Yelp_Logo.svg.png
+  image: yelp.png
 
 - company: BrowserStack
   url: https://www.browserstack.com/
   time: Jun 2018 - Apr 2019
   position: Software Engineer & DevOps, Backend
-  image: https://i1.wp.com/www.diogonunes.com/blog/wp-content/uploads/2016/07/browserstack-logo.png?resize=840%2C276
+  image: browserstack.svg
 
 - company: Intel Corporation
   url: https://www.intel.com/
   time: Jan 2018 - Jun 2018
   position: Software Engineering Intern
-  image: https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg
+  image: intel.svg
 
 - company: Crowdfire
   url: https://www.crowdfireapp.com/
   time: May 2017 - Jun 2017
   position: Software Engineering Intern
-  image: https://i.pinimg.com/originals/71/fa/a6/71faa63d97732a1627081c01d002892a.png
+  image: crowdfire.svg
 
 - company: Mozilla
   url: https://mozilla.org
   time: Oct 2016 - Apr 2017
   position: Software Engineer - Winter of Security
-  image: https://www-archive.mozilla.org/foundation/identity-guidelines/mozilla-foundation-bw.png
+  image: mozilla.png
 
 - company: Google
   url: https://summerofcode.withgoogle.com
   time: Apr 2016 - Aug 2016
   position: Software Engineer - Summer of Code
-  image: http://pngimg.com/uploads/google/google_PNG19644.png
+  image: google.svg
 
 - company: Noted
   url: https://play.google.com/store/apps/details?id=study.noted.app&hl=en
   time: Dec 2015 - Jan 2016
   position: Software Engineer - Freelancer
-  image: https://lh3.googleusercontent.com/ijp0yU5ecGiLHqlwrrlhvdk2R4Ga2ZvzCQQ0Me3Ty5S_gEU21r3sjUqGKahELmUVBTA=s180
+  image: noted.png
