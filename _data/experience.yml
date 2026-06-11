@@ -24,6 +24,28 @@
       points:
         - Re-architected the business acquisition product around Yelp's long-term B2B vision, cutting maintenance from 2,100 to 800 hours a year.
         - Organised and emceed weekly tech talks for 1.5 years (50+ attendance) and represented Yelp at three conferences (500+).
+- company: ReDI School
+  url: https://www.redi-school.org/
+  location: Hamburg, Germany
+  time: 2024 — Present
+  image: redi.png
+  summary: Non-profit tech school for locals and newcomers without access to digital education.
+  roles:
+    - title: Volunteer Teacher
+      time: Aug 2024 — Present
+      points:
+        - Teach free coding and computer courses, paired with a career program that connects students to Germany's digital industry.
+- company: 2hearts
+  url: https://www.2heartscommunity.com/
+  location: Hamburg, Germany
+  time: 2024 — Present
+  image: 2hearts.png
+  summary: Community of tech founders, investors, and executives with immigration backgrounds, working to enrich Europe's tech economy.
+  roles:
+    - title: Community Member
+      time: Feb 2024 — Present
+      points:
+        - Part of a network empowering talent with immigration backgrounds to get into, and get ahead in, European tech.
 - company: Harvard Business School
   url: https://online.hbs.edu/courses/organizational-leadership/
   location: HBS Online
@@ -72,6 +94,30 @@
       points:
         - Built a natural-language bot for processing employee requests, plus the event-notification framework behind it.
         - Delivered 20 bug-free features to production in two months — TDD, CI/CD, the whole catechism.
+- company: Mozilla
+  url: https://observatory.mozilla.org/
+  location: Remote, with Mozilla USA
+  time: 2016 — 2017
+  image: mozilla.png
+  summary: Winter of Security — selected top 3 of 300+ information security experts worldwide.
+  roles:
+    - title: Software Engineer, Winter of Security
+      time: Oct 2016 — Mar 2017
+      points:
+        - Co-authored ssh-scan, a Ruby security-auditing CLI, with the Mozilla team in the USA.
+        - Built its asynchronous queue-worker API service, integrated into the Mozilla Observatory — about a million requests a month.
+- company: Google
+  url: https://summerofcode.withgoogle.com/
+  location: India · Germany
+  time: '2016'
+  image: google.svg
+  summary: Summer of Code with openSUSE — top 6% of ~20,000 contributors worldwide.
+  roles:
+    - title: Software Developer, Summer of Code
+      time: Apr 2016 — Aug 2016
+      points:
+        - Built OSEM's online ticket payments on Ruby on Rails to PCI-A compliance, weighing flexible vs. secure payment designs.
+        - Shipped with a distributed openSUSE team via TDD and pair programming; presented at the openSUSE Conference in Nuremberg.
 - company: BIT Mesra
   url: https://bitmesra.ac.in/
   location: Ranchi, India
