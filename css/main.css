@@ -819,18 +819,3 @@ body::after {
   .testimonials__grid { grid-template-columns: 1fr; }
 }
 
-/* ---------- credential cards (HBS, CS50) ---------- */
-.mcard--cred {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.4rem;
-}
-.mcard__logo {
-  width: 52px; height: 52px;
-  border-radius: 14px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-@media (max-width: 640px) {
-  .mcard--cred { flex-direction: column; gap: 1rem; }
-}
