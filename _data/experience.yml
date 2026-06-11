@@ -1,61 +1,72 @@
 - company: Yelp
   url: https://www.yelp.com/
   location: Hamburg, Germany
-  time: "2019 — Present"
+  time: 2019 — Present
   image: yelp.png
-  summary: "Entry-level engineer to one of Yelp's youngest Senior Engineering Managers, against ~90 managers averaging 10 years of experience."
+  summary: Entry-level engineer to one of Yelp's youngest Senior Engineering Managers, against ~90 managers averaging 10 years of experience.
   roles:
     - title: Senior Engineering Manager
-      time: "Sep 2023 — Present"
+      time: Sep 2023 — Present
       points:
-        - "Run two teams — nine engineers across the UK and Europe — covering business acquisition on web and business growth on mobile."
-        - "Accountable for a $2M department budget and $60M in revenue, targeting 20% year-over-year B2B growth."
+        - Run two teams — nine engineers across the UK and Europe — covering business acquisition on web and business growth on mobile.
+        - Accountable for a $2M department budget and $60M in revenue, targeting 20% year-over-year B2B growth.
     - title: Engineering Manager
-      time: "Jan 2022 — Aug 2023"
+      time: Jan 2022 — Aug 2023
       points:
-        - "Took new business acquisition from 7% to 18% in 18 months by fixing funnel bottlenecks with guided digital onboarding."
-        - "Shipped 10+ product features — including a 97% improvement in partner-API worst-case performance — growing acquisition revenue from $45M to $60M."
-        - "Introduced a 360° peer-feedback process across a team of six; development velocity rose 40%."
+        - Took new business acquisition from 7% to 18% in 18 months by fixing funnel bottlenecks with guided digital onboarding.
+        - Shipped 10+ product features — including a 97% improvement in partner-API worst-case performance — growing acquisition revenue from $45M to $60M.
+        - Introduced a 360° peer-feedback process across a team of six; development velocity rose 40%.
     - title: Software Engineer
-      time: "Jun 2019 — Dec 2021"
+      time: Jun 2019 — Dec 2021
       points:
-        - "Re-architected the business acquisition product around Yelp's long-term B2B vision, cutting maintenance from 2,100 to 800 hours a year."
-        - "Organised and emceed weekly tech talks for 1.5 years (50+ attendance) and represented Yelp at three conferences (500+)."
-
+        - Re-architected the business acquisition product around Yelp's long-term B2B vision, cutting maintenance from 2,100 to 800 hours a year.
+        - Organised and emceed weekly tech talks for 1.5 years (50+ attendance) and represented Yelp at three conferences (500+).
 - company: BrowserStack
   url: https://www.browserstack.com/
   location: Mumbai, India
-  time: "2018 — 2019"
+  time: 2018 — 2019
   image: browserstack.svg
-  summary: "Backend engineer on the mobile platform at India's most valued B2B SaaS company at the time ($4B)."
+  summary: Backend engineer on the mobile platform at India's most valued B2B SaaS company at the time ($4B).
   roles:
     - title: Software Engineer, Backend Mobile Platform
-      time: "Jul 2018 — Apr 2019"
+      time: Jul 2018 — Apr 2019
       points:
-        - "Shipped three projects with the Engineering Director to support newly launched mobile devices — two weeks ahead of competitors."
-        - "Automated away manual IT maintenance, cutting mean time to recovery by 40%."
-
+        - Shipped three projects with the Engineering Director to support newly launched mobile devices — two weeks ahead of competitors.
+        - 'Owned production health for 5,000+ real devices on the Device Cloud: self-healing hosts, automated onboarding, Ansible everywhere.'
+        - Automated away manual IT maintenance, cutting mean time to recovery by 40%.
 - company: Intel
   url: https://www.intel.com/
   location: Bengaluru, India
-  time: "2018"
+  time: '2018'
   image: intel.svg
-  summary: "R&D intern on the iPhone chipset."
+  summary: R&D intern on the iPhone chipset.
   roles:
     - title: Software Engineer, R&D Intern
-      time: "Jan 2018 — Jun 2018"
+      time: Jan 2018 — Jun 2018
       points:
-        - "Re-engineered the chipset's error-detection module to run 40× faster — engineers were still talking about it after I left."
-
+        - Re-engineered the chipset's error-detection module to run 40× faster — engineers were still talking about it after I left.
+        - Built a log-analytics pipeline and anomaly dashboards used by Intel teams worldwide, saving 5,600 engineer-hours a month.
+- company: Crowdfire
+  url: https://www.crowdfireapp.com/
+  location: Navi Mumbai, India
+  time: '2017'
+  image: crowdfire.svg
+  summary: Full-stack intern on hazir, an internal communication tool.
+  roles:
+    - title: Software Developer Intern
+      time: May 2017 — Jun 2017
+      points:
+        - Built a natural-language bot for processing employee requests, plus the event-notification framework behind it.
+        - Delivered 20 bug-free features to production in two months — TDD, CI/CD, the whole catechism.
 - company: BIT Mesra
   url: https://bitmesra.ac.in/
   location: Ranchi, India
-  time: "2014 — 2018"
+  time: 2014 — 2018
   image: bit.png
-  summary: "B.Eng in Information Technology, first class with distinction (8.18/10)."
+  summary: B.Eng in Information Technology, first class with distinction (8.18/10).
   roles:
     - title: Outside the classroom
-      time: ""
+      time: ''
       points:
-        - "National rank 1 of 500+ engineers in the DigitalOcean Code Sprint."
-        - "Ran the campus computer club and a 4k-user network community — my first taste of herding engineers."
+        - National rank 1 of 500+ engineers in the DigitalOcean Code Sprint; Google India Challenge Scholar; Web Summit scholarship (top 100); India Innovation Challenge finalist (top 0.05%).
+        - Ran the campus computer club and a 4k-user network community, and spoke at ACM and IET (UK) chapter events — my first taste of herding engineers.
