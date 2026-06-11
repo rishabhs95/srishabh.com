@@ -1,4 +1,4 @@
-<section class="journey section" id="track-record">
+<section class="journey section" id="track-record" data-num="02">
   <div class="section__head reveal">
     <p class="section__eyebrow">Track record</p>
     <h2 class="section__title">Where I've been</h2>
@@ -10,14 +10,16 @@
     {% for org in site.data.experience %}
     <article class="company reveal">
       <div class="timeline__dot" aria-hidden="true"></div>
-      <header class="company__head">
-        <img class="company__logo" src="{{ site.baseurl }}/img/logo/{{ org.image }}" alt="{{ org.company }} logo" loading="lazy">
-        <div>
-          <h3 class="company__name"><a href="{{ org.url }}" target="_blank" rel="noopener">{{ org.company }}</a></h3>
-          <p class="company__meta">{{ org.time }} · {{ org.location }}</p>
-        </div>
-      </header>
-      <p class="company__summary">{{ org.summary }}</p>
+      <div class="company__left">
+        <header class="company__head">
+          <img class="company__logo" src="{{ site.baseurl }}/img/logo/{{ org.image }}" alt="{{ org.company }} logo" loading="lazy">
+          <div>
+            <h3 class="company__name"><a href="{{ org.url }}" target="_blank" rel="noopener">{{ org.company }}</a></h3>
+            <p class="company__meta">{{ org.time }} · {{ org.location }}</p>
+          </div>
+        </header>
+        <p class="company__summary">{{ org.summary }}</p>
+      </div>
       <div class="company__roles">
         {% for role in org.roles %}
         <div class="role">
