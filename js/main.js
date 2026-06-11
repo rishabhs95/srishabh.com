@@ -76,6 +76,24 @@
     points.rotation.z = -0.1;
     scene.add(points);
 
+    /* per-string pluck energy (scroll strum + mouse) */
+    var pluck = new Float32Array(STRINGS);
+
+    /* scroll strum: the "pick" crosses one string after another */
+    var lastStrum = 0;
+    function strum() {
+      var heroH = canvas.parentElement.clientHeight || 1;
+      var p = Math.max(0, Math.min(1, window.scrollY / (heroH * 0.72)));
+      var idx = Math.round(p * (STRINGS - 1));
+      if (idx !== lastStrum) {
+        var from = Math.min(lastStrum, idx) + (idx > lastStrum ? 1 : 0);
+        var to = Math.max(lastStrum, idx) - (idx > lastStrum ? 0 : 1);
+        for (var k = from; k <= to; k++) pluck[k] = 1.6;
+        lastStrum = idx;
+      }
+    }
+    window.addEventListener("scroll", strum, { passive: true });
+
     /* mouse "pluck": amplitude swells near the pointer */
     var mouse = { x: -999, y: -999 };
     var energy = 0; // decaying pluck energy
@@ -132,16 +150,26 @@
       rafId = requestAnimationFrame(loop);
       var t = clock.getElapsedTime();
       energy *= 0.96;
+      for (var k = 0; k < STRINGS; k++) pluck[k] *= 0.955;
       for (var j = 0; j < count; j++) {
         var x = pos[j * 3];
         var by = baseY[j];
-        // idle hum
-        var amp = 0.26 + 0.09 * Math.sin(t * 0.5 + by);
+        var row = (j / PTS) | 0;
+        // idle hum (kept low so plucks stand out)
+        var amp = 0.18 + 0.06 * Math.sin(t * 0.5 + by);
         // pluck swell near pointer
         var dx = x - mouse.x, dy = by - mouse.y;
         var d2 = dx * dx + dy * dy;
         amp += energy * 1.5 * Math.exp(-d2 / 18);
-        pos[j * 3 + 1] = by + Math.sin(x * 0.55 + t * 2.2 + by * 1.7) * amp;
+        // strummed string: whole string twangs, loudest mid-string like a real pluck
+        var pk = pluck[row];
+        var twang = 0;
+        if (pk > 0.02) {
+          var mid = 1 - Math.abs(x) / (WIDTH * 0.5);
+          amp += pk * 0.9 * mid;
+          twang = pk * 0.3 * mid * Math.sin(x * 1.7 + t * 11);
+        }
+        pos[j * 3 + 1] = by + Math.sin(x * 0.55 + t * 2.2 + by * 1.7) * amp + twang;
       }
       geo.attributes.position.needsUpdate = true;
       renderer.render(scene, camera);
