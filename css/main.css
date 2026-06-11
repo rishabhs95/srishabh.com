@@ -187,7 +187,7 @@ body::after {
 .hero__title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(2.4rem, 6.4vw, 5.2rem);
+  font-size: clamp(2.3rem, 5.8vw, 4.7rem);
   line-height: 1.04;
   letter-spacing: -0.03em;
   margin-bottom: 2rem;
@@ -532,4 +532,94 @@ body::after {
   color: var(--muted);
   max-width: 28rem;
   margin: -1.25rem auto 2.5rem;
+}
+
+/* ---------- v3: employer-grouped track record ---------- */
+.company {
+  position: relative;
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  border-bottom: 1px solid var(--border);
+}
+.company:last-child { border-bottom: none; }
+.company__head {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 1rem;
+}
+.company__logo {
+  width: 46px; height: 46px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 6px;
+  flex-shrink: 0;
+}
+.company__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  letter-spacing: -0.02em;
+}
+.company__name a:hover { color: var(--accent); }
+.company__meta {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+.company__summary {
+  color: var(--text);
+  opacity: 0.85;
+  max-width: 42rem;
+  margin-bottom: 1.5rem;
+}
+.company__roles {
+  display: grid;
+  gap: 1.4rem;
+  border-left: 2px solid var(--border);
+  padding-left: clamp(1.1rem, 2.5vw, 1.75rem);
+  margin-left: 0.4rem;
+}
+.role__head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin-bottom: 0.5rem;
+}
+.role__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.role__time {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+}
+.role__points {
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+.role__points li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 44rem;
+}
+.role__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gradient);
 }

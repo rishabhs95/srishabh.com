@@ -1,41 +1,61 @@
 - company: Yelp
   url: https://www.yelp.com/
-  time: "2023 — Present"
-  position: Senior Engineering Manager
-  scope: "Two teams, nine engineers across the UK and Europe — business acquisition on web, business growth on mobile. Accountable for a $2M budget and $60M in revenue."
+  location: Hamburg, Germany
+  time: "2019 — Present"
   image: yelp.png
-
-- company: Yelp
-  url: https://www.yelp.com/
-  time: "2022 — 2023"
-  position: Engineering Manager
-  scope: "Took new business acquisition from 7% to 18% and its revenue from $45M to $60M in 18 months. Shipped 10+ product features and rebuilt how the team exchanges feedback — development velocity rose 40%."
-  image: yelp.png
-
-- company: Yelp
-  url: https://www.yelp.com/
-  time: "2019 — 2021"
-  position: Software Engineer
-  scope: "Re-architected the business acquisition product, cutting maintenance from 2,100 to 800 hours a year. Ran Yelp Hamburg's weekly tech talks for 1.5 years and represented Yelp at three conferences."
-  image: yelp.png
+  summary: "Entry-level engineer to one of Yelp's youngest Senior Engineering Managers, against ~90 managers averaging 10 years of experience."
+  roles:
+    - title: Senior Engineering Manager
+      time: "Sep 2023 — Present"
+      points:
+        - "Run two teams — nine engineers across the UK and Europe — covering business acquisition on web and business growth on mobile."
+        - "Accountable for a $2M department budget and $60M in revenue, targeting 20% year-over-year B2B growth."
+    - title: Engineering Manager
+      time: "Jan 2022 — Aug 2023"
+      points:
+        - "Took new business acquisition from 7% to 18% in 18 months by fixing funnel bottlenecks with guided digital onboarding."
+        - "Shipped 10+ product features — including a 97% improvement in partner-API worst-case performance — growing acquisition revenue from $45M to $60M."
+        - "Introduced a 360° peer-feedback process across a team of six; development velocity rose 40%."
+    - title: Software Engineer
+      time: "Jun 2019 — Dec 2021"
+      points:
+        - "Re-architected the business acquisition product around Yelp's long-term B2B vision, cutting maintenance from 2,100 to 800 hours a year."
+        - "Organised and emceed weekly tech talks for 1.5 years (50+ attendance) and represented Yelp at three conferences (500+)."
 
 - company: BrowserStack
   url: https://www.browserstack.com/
+  location: Mumbai, India
   time: "2018 — 2019"
-  position: Software Engineer, Backend Mobile Platform
-  scope: "Shipped three projects with the Engineering Director to support newly launched mobile devices — two weeks ahead of competitors. Automated IT maintenance, cutting mean time to recovery by 40%."
   image: browserstack.svg
+  summary: "Backend engineer on the mobile platform at India's most valued B2B SaaS company at the time ($4B)."
+  roles:
+    - title: Software Engineer, Backend Mobile Platform
+      time: "Jul 2018 — Apr 2019"
+      points:
+        - "Shipped three projects with the Engineering Director to support newly launched mobile devices — two weeks ahead of competitors."
+        - "Automated away manual IT maintenance, cutting mean time to recovery by 40%."
 
 - company: Intel
   url: https://www.intel.com/
+  location: Bengaluru, India
   time: "2018"
-  position: Software Engineer, R&D Intern
-  scope: "Re-engineered the iPhone chipset's error-detection module to run 40× faster."
   image: intel.svg
+  summary: "R&D intern on the iPhone chipset."
+  roles:
+    - title: Software Engineer, R&D Intern
+      time: "Jan 2018 — Jun 2018"
+      points:
+        - "Re-engineered the chipset's error-detection module to run 40× faster — engineers were still talking about it after I left."
 
 - company: BIT Mesra
   url: https://bitmesra.ac.in/
+  location: Ranchi, India
   time: "2014 — 2018"
-  position: B.Eng, Information Technology
-  scope: "First class with distinction (8.18/10). National rank 1 of 500+ in the DigitalOcean Code Sprint, ran the campus computer club, and kept a 4k-user network alive — my first taste of herding engineers."
   image: bit.png
+  summary: "B.Eng in Information Technology, first class with distinction (8.18/10)."
+  roles:
+    - title: Outside the classroom
+      time: ""
+      points:
+        - "National rank 1 of 500+ engineers in the DigitalOcean Code Sprint."
+        - "Ran the campus computer club and a 4k-user network community — my first taste of herding engineers."
