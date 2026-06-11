@@ -15,16 +15,10 @@ built as a plain Jekyll site (GitHub Pages compatible, no gulp/npm build needed)
 Legacy includes from the old design (`intro.html`, `background.html`, `switch.html`,
 `education.html`, `experience.html`, etc.) are unused and can be deleted.
 
-## ⚠️ Numbers to verify before publishing
+## Content sources
 
-The copy includes placeholder leadership metrics — adjust to reality:
-
-- "15+ engineers hired, coached & promoted" (`_includes/metrics.html`)
-- "3 teams built or scaled from the ground up" (`_includes/metrics.html`)
-- "100M+ daily requests" (`_includes/metrics.html`)
-- "8 years from first commit to org-level scope" (`_includes/metrics.html`)
-- EM start year "2023" and role scope lines (`_data/experience.yml`)
-- "Hundreds of interviews" (`_includes/multiplier.html`)
+Copy and metrics are sourced from Rishabh_Resume (June 2026). `resume.pdf` is that
+same file. Update `_data/experience.yml` and `_includes/metrics.html` as numbers evolve.
 
 ## Develop locally
 

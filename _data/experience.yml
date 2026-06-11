@@ -1,48 +1,41 @@
 - company: Yelp
   url: https://www.yelp.com/
   time: "2023 — Present"
-  position: Engineering Manager
-  scope: "I manage the backend teams I used to code on — roadmaps, hiring, and keeping a platform that millions of people use every day fast and boring."
+  position: Senior Engineering Manager
+  scope: "Two teams, nine engineers across the UK and Europe — business acquisition on web, business growth on mobile. Accountable for a $2M budget and $60M in revenue."
   image: yelp.png
 
 - company: Yelp
   url: https://www.yelp.com/
-  time: "2019 — 2023"
-  position: "Senior Software Engineer → Tech Lead"
-  scope: "Built infrastructure to connect people with great local businesses. Somewhere along the way, leading projects turned into leading people."
+  time: "2022 — 2023"
+  position: Engineering Manager
+  scope: "Took new business acquisition from 7% to 18% and its revenue from $45M to $60M in 18 months. Shipped 10+ product features and rebuilt how the team exchanges feedback — development velocity rose 40%."
+  image: yelp.png
+
+- company: Yelp
+  url: https://www.yelp.com/
+  time: "2019 — 2021"
+  position: Software Engineer
+  scope: "Re-architected the business acquisition product, cutting maintenance from 2,100 to 800 hours a year. Ran Yelp Hamburg's weekly tech talks for 1.5 years and represented Yelp at three conferences."
   image: yelp.png
 
 - company: BrowserStack
   url: https://www.browserstack.com/
   time: "2018 — 2019"
-  position: Software Engineer, Backend & DevOps
-  scope: "Helped Fortune 500 companies be more agile on the web's largest real-device testing cloud."
+  position: Software Engineer, Backend Mobile Platform
+  scope: "Shipped three projects with the Engineering Director to support newly launched mobile devices — two weeks ahead of competitors. Automated IT maintenance, cutting mean time to recovery by 40%."
   image: browserstack.svg
 
 - company: Intel
   url: https://www.intel.com/
   time: "2018"
-  position: Software Engineering Intern
-  scope: "Blazing fast infra for next-gen cellular devices."
+  position: Software Engineer, R&D Intern
+  scope: "Re-engineered the iPhone chipset's error-detection module to run 40× faster."
   image: intel.svg
-
-- company: Mozilla
-  url: https://mozilla.org
-  time: "2016 — 2017"
-  position: Winter of Security
-  scope: "Improved system security over the web as a contributor to ssh_scan."
-  image: mozilla.png
-
-- company: Google
-  url: https://summerofcode.withgoogle.com
-  time: "2016"
-  position: Summer of Code
-  scope: "Worked on OSEM, enabling an online presence for event organisers everywhere."
-  image: google.svg
 
 - company: BIT Mesra
   url: https://bitmesra.ac.in/
   time: "2014 — 2018"
   position: B.Eng, Information Technology
-  scope: "First class with distinction. Ran Direct Connect and the ACM chapter — my first taste of herding engineers."
+  scope: "First class with distinction (8.18/10). National rank 1 of 500+ in the DigitalOcean Code Sprint, ran the campus computer club, and kept a 4k-user network alive — my first taste of herding engineers."
   image: bit.png
