@@ -21,6 +21,17 @@
       points:
         - Re-architected the business acquisition product around Yelp's long-term B2B vision, cutting maintenance from 2,100 to 800 hours a year.
         - Organised and emceed weekly tech talks for 1.5 years (50+ attendance) and represented Yelp at three conferences (500+).
+- company: Harvard Business School
+  url: https://online.hbs.edu/courses/organizational-leadership/
+  location: HBS Online
+  time: Certificate
+  image: hbs.png
+  summary: Organizational Leadership — HBS's case-based program for experienced team leaders.
+  roles:
+    - title: Organizational Leadership
+      time: ''
+      points:
+        - Casework on setting and communicating direction, influencing through other managers, generating organizational alignment, and engineering change.
 - company: BrowserStack
   url: https://www.browserstack.com/
   location: Mumbai, India

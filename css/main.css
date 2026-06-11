@@ -774,3 +774,47 @@ body::after {
   .sound-ui { bottom: 1rem; left: 1rem; flex-wrap: wrap; max-width: calc(100vw - 2rem); }
   .sound-toggle { padding: 0.45rem 0.85rem; }
 }
+
+/* ---------- testimonials ---------- */
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.tcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: clamp(1.75rem, 3vw, 2.4rem);
+}
+.tcard__quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: var(--text);
+  opacity: 0.92;
+}
+.tcard__who { display: flex; flex-direction: column; gap: 0.15rem; }
+.tcard__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.tcard__role { color: var(--muted); font-size: 0.82rem; }
+.testimonials__fine {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+.testimonials__fine a { border-bottom: 1px solid var(--border-strong); }
+.testimonials__fine a:hover { color: var(--accent); }
+@media (max-width: 900px) {
+  .testimonials__grid { grid-template-columns: 1fr; }
+}
