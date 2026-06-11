@@ -187,7 +187,7 @@ body::after {
 .hero__title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(2.6rem, 7.2vw, 6rem);
+  font-size: clamp(2.4rem, 6.4vw, 5.2rem);
   line-height: 1.04;
   letter-spacing: -0.03em;
   margin-bottom: 2rem;
@@ -511,4 +511,25 @@ body::after {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ---------- v2 copy additions ---------- */
+.hero__emoji {
+  height: 0.78em;
+  width: auto;
+  vertical-align: baseline;
+  margin-left: 0.05em;
+  transform-origin: 70% 75%;
+}
+.hero__emoji:hover { animation: wave 0.9s ease-in-out; }
+@keyframes wave {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(18deg); }
+  55% { transform: rotate(-10deg); }
+  80% { transform: rotate(12deg); }
+}
+.contact__sub {
+  color: var(--muted);
+  max-width: 28rem;
+  margin: -1.25rem auto 2.5rem;
 }

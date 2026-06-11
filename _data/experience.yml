@@ -2,47 +2,47 @@
   url: https://www.yelp.com/
   time: "2023 — Present"
   position: Engineering Manager
-  scope: "Leading backend teams behind Yelp's core platform — owning multi-quarter strategy, hiring and growth, and delivery partnerships across product and infrastructure orgs."
+  scope: "I manage the backend teams I used to code on — roadmaps, hiring, and keeping a platform that millions of people use every day fast and boring."
   image: yelp.png
 
 - company: Yelp
   url: https://www.yelp.com/
   time: "2019 — 2023"
   position: "Senior Software Engineer → Tech Lead"
-  scope: "Scaled core infrastructure connecting millions of people with great local businesses. Led project teams, ran technical design across services, and mentored engineers into senior roles."
+  scope: "Built infrastructure to connect people with great local businesses. Somewhere along the way, leading projects turned into leading people."
   image: yelp.png
 
 - company: BrowserStack
   url: https://www.browserstack.com/
   time: "2018 — 2019"
   position: Software Engineer, Backend & DevOps
-  scope: "Helped Fortune 500 engineering teams ship faster on the web's largest real-device testing cloud."
+  scope: "Helped Fortune 500 companies be more agile on the web's largest real-device testing cloud."
   image: browserstack.svg
 
 - company: Intel
   url: https://www.intel.com/
   time: "2018"
   position: Software Engineering Intern
-  scope: "Built blazing-fast infrastructure for next-generation cellular devices."
+  scope: "Blazing fast infra for next-gen cellular devices."
   image: intel.svg
 
 - company: Mozilla
   url: https://mozilla.org
   time: "2016 — 2017"
   position: Winter of Security
-  scope: "Improved system security across the open web as a contributor to ssh_scan."
+  scope: "Improved system security over the web as a contributor to ssh_scan."
   image: mozilla.png
 
 - company: Google
   url: https://summerofcode.withgoogle.com
   time: "2016"
   position: Summer of Code
-  scope: "Open-source engineering on OSEM — enabling an online presence for event organizers everywhere."
+  scope: "Worked on OSEM, enabling an online presence for event organisers everywhere."
   image: google.svg
 
 - company: BIT Mesra
   url: https://bitmesra.ac.in/
   time: "2014 — 2018"
   position: B.Eng, Information Technology
-  scope: "First class with distinction. Led the campus ACM chapter as Webmaster and Direct Connect as its Administrator."
+  scope: "First class with distinction. Ran Direct Connect and the ACM chapter — my first taste of herding engineers."
   image: bit.png
