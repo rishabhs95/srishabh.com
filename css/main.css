@@ -819,34 +819,19 @@ body::after {
   .testimonials__grid { grid-template-columns: 1fr; }
 }
 
-/* ---------- HBS credential strip ---------- */
-.credential {
+/* ---------- featured wide card (HBS) ---------- */
+.mcard--wide {
+  grid-column: 1 / -1;
   display: flex;
-  align-items: center;
-  gap: 1.1rem;
-  margin-top: 1.5rem;
-  background: var(--bg-elev);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.9rem 1.6rem 0.9rem 0.9rem;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  align-items: flex-start;
+  gap: 1.4rem;
 }
-.credential:hover { border-color: var(--accent); transform: translateY(-2px); }
-.credential__logo {
-  width: 44px; height: 44px;
-  border-radius: 50%;
+.mcard__logo {
+  width: 52px; height: 52px;
+  border-radius: 14px;
   object-fit: cover;
   flex-shrink: 0;
 }
-.credential__text { color: var(--muted); font-size: 0.93rem; line-height: 1.5; }
-.credential__text strong { color: var(--text); font-family: var(--font-display); font-weight: 600; }
-.credential__arrow {
-  margin-left: auto;
-  color: var(--accent);
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
 @media (max-width: 640px) {
-  .credential { border-radius: 22px; flex-wrap: wrap; padding: 1.1rem 1.25rem; }
-  .credential__arrow { display: none; }
+  .mcard--wide { flex-direction: column; gap: 1rem; }
 }
