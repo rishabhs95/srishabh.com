@@ -12,6 +12,86 @@
   var isMobile = window.matchMedia("(max-width: 768px)").matches;
   var isTouch = window.matchMedia("(hover: none)").matches;
 
+
+  /* ----------------------------------------------------------
+     sound: Karplus-Strong plucked strings (opt-in toggle)
+     A-minor pentatonic, low string at the top like a guitar
+     ---------------------------------------------------------- */
+  var rsAudio = (function () {
+    var FREQS = [261.63, 220.0, 196.0, 164.81, 146.83, 130.81, 110.0]; // row 0 = bottom = highest
+    var ctx = null, master = null, buffers = {};
+    var enabled = false;
+
+    function ks(freq) {
+      var sr = ctx.sampleRate, dur = 1.6, n = Math.floor(sr * dur);
+      var buf = ctx.createBuffer(1, n, sr);
+      var data = buf.getChannelData(0);
+      var period = Math.max(2, Math.round(sr / freq));
+      var ring = new Float32Array(period);
+      for (var i = 0; i < period; i++) ring[i] = Math.random() * 2 - 1;
+      var idx = 0;
+      for (var j = 0; j < n; j++) {
+        var cur = ring[idx];
+        var nxt = ring[(idx + 1) % period];
+        data[j] = cur;
+        ring[idx] = (cur + nxt) * 0.5 * 0.996;
+        idx = (idx + 1) % period;
+      }
+      return buf;
+    }
+
+    function ensure() {
+      if (ctx) { if (ctx.state === "suspended") ctx.resume(); return true; }
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return false;
+      ctx = new AC();
+      var lp = ctx.createBiquadFilter();
+      lp.type = "lowpass";
+      lp.frequency.value = 3200;
+      master = ctx.createGain();
+      master.gain.value = 0.22;
+      master.connect(lp);
+      lp.connect(ctx.destination);
+      FREQS.forEach(function (f, i) { buffers[i] = ks(f); });
+      return true;
+    }
+
+    return {
+      get enabled() { return enabled; },
+      toggle: function () {
+        if (!enabled && !ensure()) return false;
+        enabled = !enabled;
+        return enabled;
+      },
+      play: function (i, vel) {
+        if (!enabled || !ctx || !buffers[i]) return;
+        var src = ctx.createBufferSource();
+        src.buffer = buffers[i];
+        var g = ctx.createGain();
+        g.gain.value = Math.min(vel || 1, 1.4) * 0.5;
+        src.connect(g);
+        g.connect(master);
+        src.start();
+      }
+    };
+  })();
+
+  function initSoundToggle() {
+    if (prefersReduced || !window.THREE || !document.getElementById("hero-canvas")) return;
+    var btn = document.createElement("button");
+    btn.className = "sound-toggle";
+    btn.setAttribute("aria-pressed", "false");
+    btn.setAttribute("aria-label", "Toggle string sound");
+    btn.innerHTML = '<span class="sound-toggle__icon">&#9834;</span><span class="sound-toggle__label">sound off</span>';
+    document.body.appendChild(btn);
+    btn.addEventListener("click", function () {
+      var on = rsAudio.toggle();
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.querySelector(".sound-toggle__label").textContent = on ? "sound on" : "sound off";
+      if (on) rsAudio.play(4, 0.9); // a little confirmation pluck
+    });
+  }
+
   /* ----------------------------------------------------------
      THREE.js — vibrating strings (a nod to the guitar)
      ---------------------------------------------------------- */
@@ -78,6 +158,15 @@
 
     /* per-string pluck energy (scroll strum + mouse) */
     var pluck = new Float32Array(STRINGS);
+    function pluckString(k, vel, soundDelay) {
+      if (k < 0 || k >= STRINGS) return;
+      pluck[k] = Math.max(pluck[k], vel);
+      if (soundDelay) {
+        setTimeout(function () { rsAudio.play(k, vel * 0.7); }, soundDelay);
+      } else {
+        rsAudio.play(k, vel * 0.7);
+      }
+    }
 
     /* scroll strum: the "pick" crosses one string after another */
     var lastStrum = 0;
@@ -86,9 +175,14 @@
       var p = Math.max(0, Math.min(1, window.scrollY / (heroH * 0.72)));
       var idx = Math.round(p * (STRINGS - 1));
       if (idx !== lastStrum) {
-        var from = Math.min(lastStrum, idx) + (idx > lastStrum ? 1 : 0);
-        var to = Math.max(lastStrum, idx) - (idx > lastStrum ? 0 : 1);
-        for (var k = from; k <= to; k++) pluck[k] = 1.6;
+        var down = idx > lastStrum;
+        var from = Math.min(lastStrum, idx) + (down ? 1 : 0);
+        var to = Math.max(lastStrum, idx) - (down ? 0 : 1);
+        var order = 0;
+        for (var k = down ? from : to; down ? k <= to : k >= from; down ? k++ : k--) {
+          pluckString(STRINGS - 1 - k, 1.6, order * 35); // pick travels down the screen
+          order++;
+        }
         lastStrum = idx;
       }
     }
@@ -107,9 +201,21 @@
       mouse.y = ny * h / 2;
     }
     if (!isTouch) {
+      var lastRow = null;
       window.addEventListener("mousemove", function (e) {
         toWorld(e);
         energy = Math.min(energy + 0.06, 1.6);
+        // which string is the pointer on? (undo the slight z-rotation)
+        var ym = mouse.y + 0.1 * mouse.x;
+        var rowF = (ym + 0.5) / GAP + (STRINGS - 1) / 2;
+        var row = Math.round(rowF);
+        var near = Math.abs(rowF - row) < 0.35;
+        if (near && row >= 0 && row < STRINGS && row !== lastRow) {
+          pluckString(row, 1.3);
+          lastRow = row;
+        } else if (!near) {
+          lastRow = null;
+        }
       }, { passive: true });
     }
 
@@ -384,6 +490,7 @@
   function boot() {
     initNav();
     initStrings();
+    initSoundToggle();
     initCursor();
     initMagnetic();
     initScramble();
