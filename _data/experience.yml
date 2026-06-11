@@ -1,41 +1,48 @@
-- company: Yelp, Inc.
+- company: Yelp
   url: https://www.yelp.com/
-  time: Jun 2019 - Present
-  position: Software Engineer, Backend
+  time: "2023 — Present"
+  position: Engineering Manager
+  scope: "Leading backend teams behind Yelp's core platform — owning multi-quarter strategy, hiring and growth, and delivery partnerships across product and infrastructure orgs."
+  image: yelp.png
+
+- company: Yelp
+  url: https://www.yelp.com/
+  time: "2019 — 2023"
+  position: "Senior Software Engineer → Tech Lead"
+  scope: "Scaled core infrastructure connecting millions of people with great local businesses. Led project teams, ran technical design across services, and mentored engineers into senior roles."
   image: yelp.png
 
 - company: BrowserStack
   url: https://www.browserstack.com/
-  time: Jun 2018 - Apr 2019
-  position: Software Engineer & DevOps, Backend
+  time: "2018 — 2019"
+  position: Software Engineer, Backend & DevOps
+  scope: "Helped Fortune 500 engineering teams ship faster on the web's largest real-device testing cloud."
   image: browserstack.svg
 
-- company: Intel Corporation
+- company: Intel
   url: https://www.intel.com/
-  time: Jan 2018 - Jun 2018
+  time: "2018"
   position: Software Engineering Intern
+  scope: "Built blazing-fast infrastructure for next-generation cellular devices."
   image: intel.svg
-
-- company: Crowdfire
-  url: https://www.crowdfireapp.com/
-  time: May 2017 - Jun 2017
-  position: Software Engineering Intern
-  image: crowdfire.svg
 
 - company: Mozilla
   url: https://mozilla.org
-  time: Oct 2016 - Apr 2017
-  position: Software Engineer - Winter of Security
+  time: "2016 — 2017"
+  position: Winter of Security
+  scope: "Improved system security across the open web as a contributor to ssh_scan."
   image: mozilla.png
 
 - company: Google
   url: https://summerofcode.withgoogle.com
-  time: Apr 2016 - Aug 2016
-  position: Software Engineer - Summer of Code
+  time: "2016"
+  position: Summer of Code
+  scope: "Open-source engineering on OSEM — enabling an online presence for event organizers everywhere."
   image: google.svg
 
-- company: Noted
-  url: https://play.google.com/store/apps/details?id=study.noted.app&hl=en
-  time: Dec 2015 - Jan 2016
-  position: Software Engineer - Freelancer
-  image: noted.png
+- company: BIT Mesra
+  url: https://bitmesra.ac.in/
+  time: "2014 — 2018"
+  position: B.Eng, Information Technology
+  scope: "First class with distinction. Led the campus ACM chapter as Webmaster and Direct Connect as its Administrator."
+  image: bit.png

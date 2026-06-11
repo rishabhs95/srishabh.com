@@ -1,0 +1,25 @@
+<section class="journey section" id="journey">
+  <div class="section__head reveal">
+    <p class="section__eyebrow">Journey</p>
+    <h2 class="section__title">Scope, compounding</h2>
+    <p class="section__sub">Every role taught me a bigger unit of impact — from functions,
+    to services, to teams, to the org around them.</p>
+  </div>
+  <div class="timeline">
+    <div class="timeline__line" aria-hidden="true"></div>
+    {% for job in site.data.experience %}
+    <article class="timeline__item reveal">
+      <div class="timeline__dot" aria-hidden="true"></div>
+      <div class="timeline__meta">
+        <span class="timeline__time">{{ job.time }}</span>
+        <img class="timeline__logo" src="{{ site.baseurl }}/img/logo/{{ job.image }}" alt="{{ job.company }} logo" loading="lazy">
+      </div>
+      <div class="timeline__content">
+        <h3 class="timeline__position">{{ job.position }}</h3>
+        <a class="timeline__company" href="{{ job.url }}" target="_blank" rel="noopener">{{ job.company }}</a>
+        <p class="timeline__scope">{{ job.scope }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
