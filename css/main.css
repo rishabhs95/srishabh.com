@@ -706,12 +706,43 @@ body::after {
   }
 }
 
-/* ---------- sound toggle ---------- */
-.sound-toggle {
+/* ---------- sound toggle + tuning chips ---------- */
+.sound-ui {
   position: fixed;
   bottom: 1.4rem;
   left: 1.4rem;
   z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.sound-tunings {
+  display: none;
+  align-items: center;
+  gap: 0.35rem;
+}
+.sound-ui.is-on .sound-tunings { display: flex; }
+.sound-chip {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  background: rgba(11, 10, 8, 0.75);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+.sound-chip:hover { border-color: var(--accent); color: var(--text); }
+.sound-chip[aria-pressed="true"] {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.sound-toggle {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -740,5 +771,6 @@ body::after {
   50% { transform: translateY(-2px); }
 }
 @media (max-width: 640px) {
-  .sound-toggle { bottom: 1rem; left: 1rem; padding: 0.45rem 0.85rem; }
+  .sound-ui { bottom: 1rem; left: 1rem; flex-wrap: wrap; max-width: calc(100vw - 2rem); }
+  .sound-toggle { padding: 0.45rem 0.85rem; }
 }

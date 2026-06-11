@@ -18,9 +18,17 @@
      A-minor pentatonic, low string at the top like a guitar
      ---------------------------------------------------------- */
   var rsAudio = (function () {
-    var FREQS = [261.63, 220.0, 196.0, 164.81, 146.83, 130.81, 110.0]; // row 0 = bottom = highest
-    var ctx = null, master = null, buffers = {};
+    /* row 0 = bottom string = highest pitch; index 6 = top = lowest (guitar) */
+    var TUNINGS = {
+      dreamy: { label: "dreamy", freqs: [587.33, 440.0, 392.0, 329.63, 293.66, 220.0, 146.83] }, /* DADGAD-ish sus */
+      warm:   { label: "warm",   freqs: [440.0, 369.99, 293.66, 220.0, 185.0, 146.83, 110.0] },  /* open D major */
+      bright: { label: "bright", freqs: [293.66, 261.63, 220.0, 196.0, 164.81, 146.83, 130.81] },/* C major pent */
+      moody:  { label: "moody",  freqs: [261.63, 220.0, 196.0, 164.81, 146.83, 130.81, 110.0] }  /* A minor pent */
+    };
+    var ctx = null, master = null;
+    var buffers = {};            /* key: tuning + ":" + row */
     var enabled = false;
+    var tuning = "dreamy";
 
     function ks(freq) {
       var sr = ctx.sampleRate, dur = 1.6, n = Math.floor(sr * dur);
@@ -40,6 +48,12 @@
       return buf;
     }
 
+    function buffer(row) {
+      var key = tuning + ":" + row;
+      if (!buffers[key]) buffers[key] = ks(TUNINGS[tuning].freqs[row]);
+      return buffers[key];
+    }
+
     function ensure() {
       if (ctx) { if (ctx.state === "suspended") ctx.resume(); return true; }
       var AC = window.AudioContext || window.webkitAudioContext;
@@ -52,21 +66,37 @@
       master.gain.value = 0.22;
       master.connect(lp);
       lp.connect(ctx.destination);
-      FREQS.forEach(function (f, i) { buffers[i] = ks(f); });
+      /* soft echo tail: quiet feedback delay in parallel */
+      var delay = ctx.createDelay(1.0);
+      delay.delayTime.value = 0.28;
+      var fb = ctx.createGain();
+      fb.gain.value = 0.32;
+      var wet = ctx.createGain();
+      wet.gain.value = 0.18;
+      master.connect(delay);
+      delay.connect(fb);
+      fb.connect(delay);
+      delay.connect(wet);
+      wet.connect(lp);
       return true;
     }
 
     return {
       get enabled() { return enabled; },
+      get tuning() { return tuning; },
+      tunings: Object.keys(TUNINGS),
+      setTuning: function (name) {
+        if (TUNINGS[name]) tuning = name;
+      },
       toggle: function () {
         if (!enabled && !ensure()) return false;
         enabled = !enabled;
         return enabled;
       },
       play: function (i, vel) {
-        if (!enabled || !ctx || !buffers[i]) return;
+        if (!enabled || !ctx) return;
         var src = ctx.createBufferSource();
-        src.buffer = buffers[i];
+        src.buffer = buffer(i);
         var g = ctx.createGain();
         g.gain.value = Math.min(vel || 1, 1.4) * 0.5;
         src.connect(g);
@@ -78,17 +108,43 @@
 
   function initSoundToggle() {
     if (prefersReduced || !window.THREE || !document.getElementById("hero-canvas")) return;
+    var wrap = document.createElement("div");
+    wrap.className = "sound-ui";
     var btn = document.createElement("button");
     btn.className = "sound-toggle";
     btn.setAttribute("aria-pressed", "false");
     btn.setAttribute("aria-label", "Toggle string sound");
     btn.innerHTML = '<span class="sound-toggle__icon">&#9834;</span><span class="sound-toggle__label">sound off</span>';
-    document.body.appendChild(btn);
+    var chips = document.createElement("div");
+    chips.className = "sound-tunings";
+    chips.setAttribute("role", "group");
+    chips.setAttribute("aria-label", "String tuning");
+    rsAudio.tunings.forEach(function (name) {
+      var c = document.createElement("button");
+      c.className = "sound-chip";
+      c.textContent = name;
+      c.setAttribute("aria-pressed", name === rsAudio.tuning ? "true" : "false");
+      c.addEventListener("click", function () {
+        rsAudio.setTuning(name);
+        chips.querySelectorAll(".sound-chip").forEach(function (o) {
+          o.setAttribute("aria-pressed", o === c ? "true" : "false");
+        });
+        /* preview: quick rake so you hear the new tuning */
+        [4, 2, 0].forEach(function (row, i) {
+          setTimeout(function () { rsAudio.play(row, 0.8); }, i * 90);
+        });
+      });
+      chips.appendChild(c);
+    });
+    wrap.appendChild(btn);
+    wrap.appendChild(chips);
+    document.body.appendChild(wrap);
     btn.addEventListener("click", function () {
       var on = rsAudio.toggle();
       btn.setAttribute("aria-pressed", on ? "true" : "false");
       btn.querySelector(".sound-toggle__label").textContent = on ? "sound on" : "sound off";
-      if (on) rsAudio.play(4, 0.9); // a little confirmation pluck
+      wrap.classList.toggle("is-on", on);
+      if (on) rsAudio.play(4, 0.9);
     });
   }
 
