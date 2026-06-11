@@ -3,6 +3,16 @@
    editorial backend · Space Grotesk × Fraunces italic
    ============================================================ */
 
+/* ---------- self-hosted fonts ---------- */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/v2/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/v2/inter-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/v2/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/v2/space-grotesk-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/v2/space-grotesk-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/v2/space-grotesk-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/v2/fraunces-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-style: italic; font-weight: 600; font-display: swap; src: url("../fonts/v2/fraunces-latin-600-italic.woff2") format("woff2"); }
+
 :root {
   --bg: #0b0a08;
   --bg-elev: #12100d;
@@ -46,7 +56,7 @@ a:focus-visible, button:focus-visible {
 em {
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 560;
+  font-weight: 600;
   color: var(--accent);
   letter-spacing: 0;
 }
@@ -304,7 +314,7 @@ body::after {
 .statement__text {
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 420;
+  font-weight: 400;
   font-size: clamp(1.6rem, 3.4vw, 2.9rem);
   line-height: 1.4;
   letter-spacing: -0.01em;
@@ -503,7 +513,7 @@ body::after {
 .company__summary {
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 420;
+  font-weight: 400;
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.55;
