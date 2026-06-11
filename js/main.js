@@ -304,18 +304,20 @@
       var cards = gsap.utils.toArray(".principle");
       cards.forEach(function (card, idx) {
         if (idx === cards.length - 1) return;
-        gsap.to(card, {
-          scale: 0.95 - (cards.length - 2 - idx) * 0.012,
-          filter: "brightness(0.45)",
-          transformOrigin: "center top",
-          ease: "none",
-          scrollTrigger: {
-            trigger: cards[idx + 1],
-            start: "top bottom-=120",
-            end: "top top+=140",
-            scrub: 0.3
-          }
-        });
+        gsap.fromTo(card,
+          { scale: 1, filter: "brightness(1)" },
+          {
+            scale: 0.965,
+            filter: "brightness(0.78)",
+            transformOrigin: "center top",
+            ease: "none",
+            scrollTrigger: {
+              trigger: cards[idx + 1],
+              start: "top 70%",
+              end: "top 15%",
+              scrub: 0.3
+            }
+          });
       });
     }
 
