@@ -819,9 +819,8 @@ body::after {
   .testimonials__grid { grid-template-columns: 1fr; }
 }
 
-/* ---------- featured wide card (HBS) ---------- */
-.mcard--wide {
-  grid-column: 1 / -1;
+/* ---------- credential cards (HBS, CS50) ---------- */
+.mcard--cred {
   display: flex;
   align-items: flex-start;
   gap: 1.4rem;
@@ -833,5 +832,5 @@ body::after {
   flex-shrink: 0;
 }
 @media (max-width: 640px) {
-  .mcard--wide { flex-direction: column; gap: 1rem; }
+  .mcard--cred { flex-direction: column; gap: 1rem; }
 }
