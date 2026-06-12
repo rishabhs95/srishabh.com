@@ -136,6 +136,13 @@
       });
       chips.appendChild(c);
     });
+    var yt = document.createElement("a");
+    yt.className = "sound-chip sound-chip--yt";
+    yt.href = "https://www.youtube.com/watch?v=OtH26HSeqVM&list=PLV8qG0f_9atb01iU2G99OhpmzITSKJGMq";
+    yt.target = "_blank";
+    yt.rel = "noopener";
+    yt.textContent = "the real thing \u2197";
+    chips.appendChild(yt);
     wrap.appendChild(btn);
     wrap.appendChild(chips);
     document.body.appendChild(wrap);

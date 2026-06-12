@@ -819,3 +819,13 @@ body::after {
   .testimonials__grid { grid-template-columns: 1fr; }
 }
 
+
+/* ---------- "the real thing" link in the sound UI ---------- */
+.sound-chip--yt {
+  text-decoration: none;
+  color: var(--accent);
+  border-color: rgba(255, 90, 45, 0.4);
+}
+.sound-chip--yt:hover { color: var(--text); background: var(--accent); border-color: var(--accent); }
+.contact__yt { border-bottom: 1px solid var(--border-strong); transition: color 0.2s ease; }
+.contact__yt:hover { color: var(--accent); }
